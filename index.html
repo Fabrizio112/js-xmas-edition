@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        .error {
+            border: 3px solid red;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +33,7 @@
         <form method="post" name="formulario" id="carta-a-santa">
             <p>Querido Santa,</p>
             <p>Mi nombre es<input type="text" name="nombre" id="nombre" value="Fabricio"> y vivo en
-                <select name="ciudad">
+                <select name="ciudad" id="ciudad">
                     <option value="">Selecciona...</option>
                     <option value="Buenos Aires">Bs. As.</option>
                     <option value="Catamarca">Catamarca</option>
@@ -63,7 +68,7 @@
             </p>
             <p>Este año realmente me gustaría recibir</p>
             <p>
-                <textarea name="descripcion-regalo" rows="4" cols="45"></textarea>
+                <textarea name="descripcion-regalo" id="descripcion-regalo" rows="4" cols="45"></textarea>
             </p>
 
             <ul id="errores">

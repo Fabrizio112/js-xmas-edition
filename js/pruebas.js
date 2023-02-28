@@ -10,6 +10,10 @@ function probarValidarNombre() {
         'Validar nombre no validó que el nombre sea menor a 50 caracteres',
     );
     console.assert(
+        validarNombre("jose324") === `El campo nombre solo deberia recibir letras`,
+        `Validar nombre no valido que solo se pueden ingresar letras `
+    )
+    console.assert(
         validarNombre("Fabrizio") === "",
         `Validar nombre no valido  que esta es una entrada valida`
     )
@@ -30,7 +34,11 @@ function probarValidarRegalo() {
         `Validar Regalo no valido si el campo esta vacio`
     )
     console.assert(
-        validarRegalo("Un futbol") === ``,
+        validarRegalo("Hola papa noel ,,,,....") === `Este campo solo puede contener letras y numeros`,
+        `Validar regalo no valido que solo puede contener letras y numeros`
+    )
+    console.assert(
+        validarRegalo("futbol") === ``,
         `Validar Regalo no valido que se ingreso un regalo valido`
     )
 }
